@@ -35,6 +35,7 @@ nav {
   letter-spacing: 3px;
   font-weight: bold;
   font-style: 14px;
+  text-transform: uppercase;
 }
 
 .burger div {
@@ -55,8 +56,8 @@ nav {
   width: 60px;
   margin-right: 20px;
 }
-.logo h4{
-    margin-top: 20px;
+.logo h4 {
+  margin-top: 20px;
 }
 /* TABLET */
 @media screen and (max-width: 768px) {
@@ -81,7 +82,7 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: rgb(80, 94, 141);       
+    background-color: rgb(80, 94, 141);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>notes</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .all {
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-top: 40px;
+      }
+      .heading {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+      }
+      .date {
+        background-color: rgba(49, 252, 252, 0.671);
+        cursor: pointer;
+        width: 100%;
+        padding: 18px;
+        border-radius: 5px;
+        outline: none;
+        font-size: 15px;
+        transition: o.4s;
+        margin: auto;
+        margin-top: 20px;
+        display: inline;
+        overflow: hidden;
+      }
+      .date:after {
+        content: "\21E9";
+        padding-left: 100%;
+      }
+      .notes {
+        padding: 0px 18px;
+        margin-top: 10px;
+        background-color: rgb(194, 157, 11);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      .date:hover {
+        background-color: grey;
+      }
+
+      .active:after {
+        content: "\21E7";
+      }
+
+      @media screen and (max-width: 768px) {
+        .all {
+          margin: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img class="image" src="./image/portfolio image.png" alt="" />
+        <h4>my text</h4>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">PROJECTS</a>
+        </li>
+        <li>
+          <a href="./assignment.html">Assignment </a>
+        </li>
+        <li>
+          <a href="#">LESSONS</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div class="all">
+      <div class="heading"></div>
+      <h2>This is the heading for my page</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo esse
+        architecto ea dolore blanditiis cumque vitae quis a odit accusantium
+        iure ipsa possimus enim cupiditate sunt, tempora consequatur officia.
+      </p>
+
+      <button class="date">
+        Day 1
+        <br />
+        MONDAY 20TH JULY,2020
+      </button>
+
+      <div class="notes">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+          laudantium natus fuga sed, quas dolorum porro, vel iste explicabo
+          obcaecati, dolores numquam. Mollitia asperiores commodi eos voluptatem
+          inventore error doloribus.
+        </p>
+      </div>
+
+      <button class="date">
+        Day 2
+        <br />
+        TUESDAY 21ST JULY, 202O
+      </button>
+
+      <div class="notes">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+          laudantium natus fuga sed, quas dolorum porro, vel iste explicabo
+          obcaecati, dolores numquam. Mollitia asperiores commodi eos voluptatem
+          inventore error doloribus.
+        </p>
+      </div>
+
+      <button class="date">
+        Day n
+        <br />
+        WEDNESDAY 22ND JULY,2020
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+          laudantium natus fuga sed, quas dolorum porro, vel iste explicabo
+          obcaecati, dolores numquam. Mollitia asperiores commodi eos voluptatem
+          inventore error doloribus.
+        </p>
+      </div>
+
+      <button class="date">
+        Day 4
+        <br />
+        THURSDAY 24TH JULY,2020
+      </button>
+
+      <div class="notes">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+          laudantium natus fuga sed, quas dolorum porro, vel iste explicabo
+          obcaecati, dolores numquam. Mollitia asperiores commodi eos voluptatem
+          inventore error doloribus.
+        </p>
+      </div>
+    </div>
+    <script>
+      var acc = document.getElementsByClassName("date");
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>

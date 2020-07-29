@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+      form {
+        margin: 40px 20px 20px 20px;
+        position: absolute;
+        left: 250px;
+        top: 80px;
+        background-color: grey;
+        ;
+        padding: 50px;
+      }
+
+      input {
+        width: 600px;
+        height: 37px;
+        margin: 10px 0px 10px 0px;
+        padding: 0px 0px 0px 30px;
+      }
+
+      select {
+        width: 600px;
+      }
+
+      textarea {
+        width: 600px;
+      }
+      button {
+        color: hsl(120, 1%, 78%);
+        width: 70px;
+        height: 50px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+<nav>
+      <div class="logo">
+        <img class="image" src="./image/portfolio image.png" alt="" />
+        <h4>my text</h4>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">PROJECTS</a>
+        </li>
+        <li>
+          <a href="./assignment.html">Assignment </a>
+        </li>
+        <li>
+          <a href="./notes.html">LESSONS</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <form action="">
+      <label for="firstName">First Name</label>
+      <br />
+
+      <input placeholder="Your First Name" type="text" />
+      <br />
+      <label for="lastName">Last Name</label>
+      <br />
+      <input placeholder="Last Name" />
+      <br />
+      <label for="">Country</label>
+      <br />
+      <select name="" id="">
+        <option value="">Afganistan</option>
+        <option value="">Iraq</option>
+        <option value="">Benin</option>
+      </select>
+      <br />
+      <label for="">subject</label>
+      <br />
+      <textarea
+        placeholder="write something
+        "
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+      <br />
+      <button type="submit">submit</button>
+    </form>
+    <script src="./app.js"></script>
+  </body>
+</html>
