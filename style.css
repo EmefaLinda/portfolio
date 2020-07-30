@@ -60,11 +60,14 @@ nav {
   margin-top: 20px;
 }
 /* TABLET */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    width: 60%;
-  }
-}
+@media screen  and (max-width:1536px) {
+        .nav-links li{
+          margin-left: 10px;
+          width: 75%;
+        }
+        
+      
+      }
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
