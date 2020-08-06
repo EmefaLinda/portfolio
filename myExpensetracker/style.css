@@ -1,101 +1,156 @@
-
-:root{
-    --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0.24);
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.603), 0 1px 2px rgba(0, 0, 0, 0.603);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    background-image: linear-gradient(
-        90deg,
-        rgb(64, 10, 114), 
-        rgb(221, 11, 127));
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-};
-.container{
-    margin: 30px auto;
-    width: 350px;
-}
-h1{
-    letter-spacing: 1px;
-    margin: 0;
+body {
+  background-image: linear-gradient(90deg, rgb(172, 39, 177), rgb(221, 19, 19));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, cursive;
 }
 
-h3{
-    border-bottom: 1px solid teal;
-    padding-bottom: 10px;
-    margin: 40px 0 10px;
+.container {
+  margin: 30px auto;
+  width: 350px;
 }
 
-h4{
-    margin: 0;
-    text-transform: uppercase;
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
 }
-.inc-exp-container{
-    background-color: azure;
-    box-shadow: var(--box-shadow);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+
+h3 {
+  border-bottom: 1px solid lawngreen;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
 }
-.inc-exp-container > div{
-    flex: 1;
-    text-align: center;
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
 }
-.inc-exp-container > div:first-of-type{
-    border-right: 1px solid #dedede;
-}
-.money{
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin: 5px 0;
-}
-.money.plus{
-    color: #2ecc71;
+
+.inc-exp-container {
+  background-color: white;
+  color: black;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 
 }
-.money.minus{
-    color: #c0392b;
 
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
 }
-label{
-    display: inline-block;
-    margin: 10px 0;
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid lawngreen;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: rgb(250, 0, 0);
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
 }
 
 input[type="text"],
 input[type="number"] {
-    border: 1px solid#dedede;
-    border-radius: 2px;
-    display: block;
-    font-size: 16px;
-    padding: 10px;
-    width: 100%;
+  border: 1px solid lawngreen;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
 }
 
-.btn{
-    cursor: pointer;
-    background-color: rgb(92,92,148);
-    box-shadow: var(--box-shadow);
-    color: #ffffff;
-    border: 0;
-    display: block;
-    font-size: 16px;
-    margin: 10px 0 30px;
-    padding: 10px;
-    width: 100%;
+.btn {
+  cursor: pointer;
+  background-color: #2ecc71;
+  box-shadow: var(--box-shadow);
+  color: white;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
 }
+
 .btn:focus,
-.delete-btn:focus{
-    outline: 0;
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list{
+list-style-type: none;
+padding: 0;
+margin-bottom: 40px;
+
+}
+
+.list li{
+background-color: #fff;
+box-sizing: var(--box-shadow);
+color: rgb(43, 41, 41);
+display: flex;
+justify-content: space-between;
+position: relative;
+padding: 10px;
+margin: 10px 0;
+
+}
+.list li.plus{
+border-right: 5px solid #2ecc71;
+color: rgb(33, 59, 6);
+}
+
+list.li.minus{
+border-right: 5px solid #c93900;
+color: red;
+}
+
+.delete-btn{
+cursor: pointer;
+background-color: rgb(15, 9, 9);
+border: 0;
+color: white;
+font-size: 30px;
+line-height: 30px;
+padding: 2p 5px;
+position: absolute;
+top: 50%;
+left: 0;
+transform: translate(-100%, -50%);
+opacity: 0;
+transition: opacity 0.3s ease;
+
+}
+.list li:hover .delete-btn{
+opacity: 1;
 }
